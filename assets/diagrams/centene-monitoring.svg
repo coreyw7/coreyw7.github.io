@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 382" role="img" aria-label="Before and after: the legacy monitoring system with exposed credentials vs. a Dockerized Selenium scraper with hourly email and Teams alerts">
+<style>
+.box{fill:#fffcf8;stroke:#d9c7b6;stroke-width:1.5}
+.box.accent{fill:#ffedd5;stroke:#c2410c}
+.box.warn{fill:#fdeeec;stroke:#b42318}
+.t{font:600 14px 'DM Sans',system-ui,-apple-system,sans-serif;fill:#2b2019}
+.s{font:400 12px 'DM Sans',system-ui,-apple-system,sans-serif;fill:#6e5d51}
+.s.warn{fill:#b42318}
+.edge{stroke:#b08d74;stroke-width:1.5;fill:none}
+.ah{fill:#b08d74}
+.grp{fill:none;stroke:#cdb39c;stroke-width:1.2;stroke-dasharray:5 4}
+.gl{font:600 10.5px ui-monospace,'SF Mono',Menlo,monospace;fill:#c2410c;letter-spacing:.06em}
+.h{font:700 12px ui-monospace,'SF Mono',Menlo,monospace;fill:#c2410c;letter-spacing:.08em}
+@media (prefers-color-scheme: dark){
+ .box{fill:#221a14;stroke:#4a3a2e}
+ .box.accent{fill:#43260f;stroke:#fb923c}
+ .box.warn{fill:#3d1a16;stroke:#f97066}
+ .t{fill:#f6ede4} .s{fill:#bba898} .s.warn{fill:#f97066}
+ .edge{stroke:#8a7262} .ah{fill:#8a7262}
+ .grp{stroke:#5a4738} .gl,.h{fill:#fb923c}
+}
+</style><defs><marker id="ah" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" orient="auto"><path class="ah" d="M0,0 L8,4 L0,8 z"/></marker></defs><text class="h" x="106.5" y="32" text-anchor="middle">BEFORE</text><text class="h" x="293.5" y="32" text-anchor="middle">AFTER</text><rect class="box" x="20.0" y="46" width="173.0" height="40" rx="10"/><text class="t" x="106.5" y="71" text-anchor="middle">Monitoring site</text><rect class="box" x="207.0" y="46" width="173.0" height="40" rx="10"/><text class="t" x="293.5" y="71" text-anchor="middle">Monitoring site</text><rect class="box warn" x="20.0" y="120" width="173.0" height="58" rx="10"/><text class="t" x="106.5" y="145" text-anchor="middle">Legacy script</text><text class="s warn" x="106.5" y="164" text-anchor="middle">passwords in repo</text><rect class="box accent" x="207.0" y="120" width="173.0" height="58" rx="10"/><text class="t" x="293.5" y="145" text-anchor="middle">Python + Selenium</text><text class="s" x="293.5" y="164" text-anchor="middle">only what's needed</text><rect class="box warn" x="20.0" y="212" width="173.0" height="58" rx="10"/><text class="t" x="106.5" y="237" text-anchor="middle">Other language</text><text class="s warn" x="106.5" y="256" text-anchor="middle">unused features</text><rect class="box accent" x="207.0" y="212" width="173.0" height="58" rx="10"/><text class="t" x="293.5" y="237" text-anchor="middle">GitLab CI + Docker</text><text class="s" x="293.5" y="256" text-anchor="middle">secrets injected at run</text><rect class="box" x="20.0" y="304" width="173.0" height="58" rx="10"/><text class="t" x="106.5" y="329" text-anchor="middle">Notifications</text><text class="s" x="106.5" y="348" text-anchor="middle">none automated</text><rect class="box accent" x="207.0" y="304" width="173.0" height="58" rx="10"/><text class="t" x="293.5" y="329" text-anchor="middle">Hourly alerts</text><text class="s" x="293.5" y="348" text-anchor="middle">Email + Teams</text><line class="edge" x1="106.5" y1="88.0" x2="106.5" y2="117.0" marker-end="url(#ah)"/><line class="edge" x1="293.5" y1="88.0" x2="293.5" y2="117.0" marker-end="url(#ah)"/><line class="edge" x1="106.5" y1="180.0" x2="106.5" y2="209.0" marker-end="url(#ah)"/><line class="edge" x1="293.5" y1="180.0" x2="293.5" y2="209.0" marker-end="url(#ah)"/><line class="edge" x1="106.5" y1="272.0" x2="106.5" y2="301.0" marker-end="url(#ah)"/><line class="edge" x1="293.5" y1="272.0" x2="293.5" y2="301.0" marker-end="url(#ah)"/></svg>

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sharing Shed Intake Triage — Corey Warden</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="container">
+      <a href="../index.html" class="nav-name">Corey Warden</a>
+      <div class="nav-links">
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <header class="case-header">
+      <a class="back" href="../index.html#projects">← All projects</a>
+      <p class="section-label">Case study · Prototype</p>
+      <h1>Sharing Shed Intake Triage</h1>
+      <p class="tagline muted">This replaces paper intake at a household-goods nonprofit. Every referral gets logged and sorted by category and urgency, so none get lost.</p>
+      <dl class="case-facts">
+        <div><dt>Role</dt><dd>Solo developer</dd></div>
+        <div><dt>Timeline</dt><dd>2026</dd></div>
+        <div><dt>Stack</dt><dd>FastAPI · React · Claude API</dd></div>
+        <div><dt>Status</dt><dd>Working prototype</dd></div>
+      </dl>
+    </header>
+
+    <article class="case-body">
+      <section>
+        <h2>The problem</h2>
+        <p>
+          The Sharing Shed is a nonprofit that collects donated household goods like furniture,
+          kitchenware, and bedding. It gives them to people getting back on their feet, often
+          after a tragedy. Partner organizations refer families to them, and I got involved
+          through connections with its board.
+        </p>
+        <p>
+          Intake was all paper based and scheduled in a messy google calendar. The time spent per 
+          referral wasn't the main issue. The issue was confusion: referrals got lost, people who 
+          needed help fell through the cracks, and it could take days or weeks after a referral 
+          before a family actually got the help they needed.
+        </p>
+      </section>
+
+      <section>
+        <h2>What I built</h2>
+        <ul>
+          <li><strong>Structured intake form:</strong> the referring organization, client and household details, items needed, and free-text notes.</li>
+          <li><strong>AI triage:</strong> Claude reads the referral and returns a category, an urgency level, a one-line summary, and a clean list of items.</li>
+          <li><strong>Bins dashboard:</strong> requests land in labeled bins such as Furniture or Bedding &amp; Linens. Staff can schedule pickups and mark requests fulfilled.</li>
+          <li><strong>Configurable, not hardcoded:</strong> staff can edit categories and urgency levels in the app, so other organizations can adapt it to their own intake process.</li>
+          <li><strong>Secure by design:</strong> the backend owns the database and the API key, so no proprietary information is exposed to the front end.</li>
+        </ul>
+        <figure class="shot">
+          <img src="../assets/screenshots/sharing-shed-dashboard.png" alt="The Sharing Shed Intake Desk: a new-referral form on the left and category bins on the right, with one triaged bedding request showing a summary, household details, and an item list." loading="lazy">
+          <figcaption>The intake desk: the referral form on the left, triaged requests sorted into bins on the right (test data)</figcaption>
+        </figure>
+      </section>
+      <section>
+        <h2>How it's built</h2>
+        <ul>
+          <li>FastAPI backend with SQLite</li>
+          <li>React + Vite frontend talking to the backend over HTTP</li>
+          <li>Anthropic Claude API for classification and extraction</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>What I learned</h2>
+        <p>
+          <strong>Precision matters with AI.</strong> To get consistent, usable answers from
+          Claude's API, I had to write precise prompts and set clear rules for what it should
+          return.
+        </p>
+        <p>
+          <strong>Build for the people, not just the problem.</strong> A technical solution can do
+          the work, but it's the people who use it that matter most. Talking openly with staff, giving demos, and learning
+          about their daily workflows let me build what they needed instead of what I assumed they
+          needed.
+        </p>
+      </section>
+
+      <nav class="case-nav">
+        <a href="hidec-scheduler.html">← HiDEC Lab Scheduler</a>
+        <a href="../index.html#projects">All projects →</a>
+      </nav>
+    </article>
+  </main>
+
+  <footer><div class="container">© 2026 Corey Warden</div></footer>
+</body>
+</html>

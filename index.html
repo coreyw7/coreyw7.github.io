@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Corey Warden — Software Developer</title>
+  <meta name="description" content="Corey Warden is a backend and full-stack developer who likes data- and math-heavy problems. Projects from Centene, a shipped capstone, and software for nonprofits.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container">
+      <a href="#top" class="nav-name">Corey Warden</a>
+      <div class="nav-links">
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#about">About</a>
+        <a href="#travel">Travel</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="top">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="container">
+        <p class="section-label">Backend &amp; Full-Stack Developer</p>
+        <h1 class="name-flight">
+          <span class="name-text">Corey <span class="name-corey">Warden</span></span>
+          <!-- Flight path loops around and through the name. Units: 100 = 1em of the h1. -->
+          <svg viewBox="-60 -140 1400 420" aria-hidden="true">
+            <path id="name-route" class="fp-line"
+              d="M -40 150 C 60 150, 110 80, 160 20 C 210 -45, 430 -60, 500 0 C 560 55, 510 150, 420 150 C 330 150, 290 80, 330 20 C 380 -50, 640 -40, 860 -55 C 1000 -65, 1150 -90, 1240 -110"/>
+            <circle class="fp-origin" cx="-40" cy="150" r="9"/>
+            <g class="fp-plane-wrap" opacity="0">
+              <!-- Stay hidden until the flight starts, so the plane never flashes at the SVG origin -->
+              <set attributeName="opacity" to="1" begin="0.3s" fill="freeze"/>
+              <path class="fp-plane" transform="scale(2.4) translate(-12 -12)"
+                d="M23 12c0-.9-.9-1.5-2-1.5h-6L9.5 3h-2l3 7.5H5L3 8H1.5l1.3 4-1.3 4H3l2-2.5h5.5l-3 7.5h2l5.5-7.5h6c1.1 0 2-.6 2-1.5z"/>
+              <animateMotion id="name-flight-anim" dur="3.4s" begin="0.3s" fill="freeze" rotate="auto"
+                calcMode="spline" keyTimes="0;1" keySplines="0.45 0 0.25 1">
+                <mpath href="#name-route"/>
+              </animateMotion>
+            </g>
+          </svg>
+        </h1>
+        <p class="tagline">
+          I am a Computer Science graduate from the University of Arkansas with a minor in Math.
+          I turn complex problems into clean, scalable, and testable solutions.
+          I have shipped tools at Centene and I'm now building software for nonprofits.
+          Check out my work below!
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">See my work</a>
+          <a class="btn" href="https://github.com/coreyw7" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/corey-warden" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" href="assets/resume.pdf" target="_blank" rel="noopener">Resume</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS (boarding passes) ===== -->
+    <section id="projects">
+      <div class="container">
+        <p class="section-label">Projects</p>
+        <h2>Selected work</h2>
+
+        <h3 class="group-title">Building now</h3>
+        <div class="passes">
+          <a class="pass" href="projects/donor-platform.html">
+            <div class="pass-main">
+              <div class="pass-top">Nonprofit · Pathways</div>
+              <h3>Pathways Donor Platform</h3>
+              <p>Online giving and donor management for Pathways Project Coalition of the Ozarks, so they own their donor data and keep more of every gift.</p>
+              <ul class="stamps"><li>Django</li><li>PostgreSQL</li><li>Stripe</li><li>HTMX</li></ul>
+              <span class="more">Read case study →</span>
+            </div>
+            <div class="pass-stub">
+              <div class="field"><span class="k">Date</span><span class="v">Aug 2026 – Now</span></div>
+              <div class="field"><span class="k">Class</span><span class="v">Nonprofit</span></div>
+              <div class="field"><span class="k">Status</span><span class="v live">In progress</span></div>
+              <div class="barcode" aria-hidden="true"></div>
+            </div>
+          </a>
+
+          <div class="pass">
+            <div class="pass-main">
+              <div class="pass-top">Personal project</div>
+              <h3>College Basketball Predictor</h3>
+              <p>A model that predicts men's college basketball games.</p>
+              <ul class="stamps"><li>Python</li><li>Data modeling</li></ul>
+            </div>
+            <div class="pass-stub">
+              <div class="field"><span class="k">Date</span><span class="v">2026 – Now</span></div>
+              <div class="field"><span class="k">Class</span><span class="v">Personal</span></div>
+              <div class="field"><span class="k">Status</span><span class="v live">In progress</span></div>
+              <div class="barcode" aria-hidden="true"></div>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="group-title">Professional · Centene</h3>
+        <div class="passes">
+          <a class="pass" href="projects/centene-monitoring.html">
+            <div class="pass-main">
+              <div class="pass-top">Centene · Internship</div>
+              <h3>Automated Monitoring System</h3>
+              <p>Rewrote an API traffic monitor in Python, took passwords out of the repo, and added hourly alerts. My team, manager, and project director continue to use it.</p>
+              <ul class="stamps"><li>Python</li><li>GitLab CI</li><li>Docker</li><li>Selenium</li></ul>
+              <span class="more">Read case study →</span>
+            </div>
+            <div class="pass-stub">
+              <div class="field"><span class="k">Date</span><span class="v">Summer 2025</span></div>
+              <div class="field"><span class="k">Class</span><span class="v">Internship</span></div>
+              <div class="field"><span class="k">Status</span><span class="v">Still in use</span></div>
+              <div class="barcode" aria-hidden="true"></div>
+            </div>
+          </a>
+
+          <a class="pass" href="projects/centene-api-validation.html">
+            <div class="pass-main">
+              <div class="pass-top">Centene · Internship</div>
+              <h3>GraphQL API Validation</h3>
+              <p>Compared a new GraphQL API against the legacy REST API across about 100 data points. The gaps I found helped push the team to an updated version of the API.</p>
+              <ul class="stamps"><li>GraphQL</li><li>Pytest</li><li>Postman</li></ul>
+              <span class="more">Read case study →</span>
+            </div>
+            <div class="pass-stub">
+              <div class="field"><span class="k">Date</span><span class="v">Summer 2024</span></div>
+              <div class="field"><span class="k">Class</span><span class="v">Internship</span></div>
+              <div class="field"><span class="k">Status</span><span class="v">Complete</span></div>
+              <div class="barcode" aria-hidden="true"></div>
+            </div>
+          </a>
+        </div>
+
+        <h3 class="group-title">Academic &amp; prototypes</h3>
+        <div class="passes">
+          <a class="pass" href="projects/hidec-scheduler.html">
+            <div class="pass-main">
+              <div class="pass-top">U of Arkansas · Capstone</div>
+              <h3>HiDEC Lab Scheduler</h3>
+              <p>Replaced scheduling over email and Google Calendar for a university electronics lab. I owned the database, billing logic, and authentication. Worked with a sponsor to get it deployed.</p>
+              <ul class="stamps"><li>FastAPI</li><li>MySQL</li><li>React</li><li>Docker</li></ul>
+              <span class="more">Read case study →</span>
+            </div>
+            <div class="pass-stub">
+              <div class="field"><span class="k">Date</span><span class="v">2025 – 2026</span></div>
+              <div class="field"><span class="k">Class</span><span class="v">Capstone</span></div>
+              <div class="field"><span class="k">Status</span><span class="v">Shipped</span></div>
+              <div class="barcode" aria-hidden="true"></div>
+            </div>
+          </a>
+
+          <a class="pass" href="projects/sharing-shed-intake.html">
+            <div class="pass-main">
+              <div class="pass-top">Nonprofit · Prototype</div>
+              <h3>Sharing Shed Intake Triage</h3>
+              <p>Replaces paper intake at a nonprofit that provides household goods, so referrals stop getting lost. AI sorts each request by category and urgency.</p>
+              <ul class="stamps"><li>FastAPI</li><li>React</li><li>Claude API</li><li>SQLite</li></ul>
+              <span class="more">Read case study →</span>
+            </div>
+            <div class="pass-stub">
+              <div class="field"><span class="k">Date</span><span class="v">2026</span></div>
+              <div class="field"><span class="k">Class</span><span class="v">Prototype</span></div>
+              <div class="field"><span class="k">Status</span><span class="v">Working demo</span></div>
+              <div class="barcode" aria-hidden="true"></div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== EXPERIENCE (route) ===== -->
+    <section id="experience">
+      <div class="container">
+        <p class="section-label">Experience</p>
+        <h2>The route so far</h2>
+        <ol class="route">
+          <li class="stop">
+            <div class="when">2022 – May 2026</div>
+            <h3>University of Arkansas</h3>
+            <p>B.S. in Computer Science with a minor in Math. My capstone was the HiDEC Lab Scheduler.</p>
+          </li>
+          <li class="stop">
+            <div class="when">May 2024 – Aug 2025</div>
+            <h3>Software Application Developer Intern · Centene</h3>
+            <p>Refactored production code, shipped sprint work, and delivered two signature projects in API validation and automated monitoring.</p>
+          </li>
+          <li class="stop">
+            <div class="when">Aug 2026 – Present</div>
+            <h3>Coding Instructor · TheCoderSchool</h3>
+            <p>Teach programming fundamentals in Scratch and Python, and design game-based curriculum for students of all ages.</p>
+          </li>
+          <li class="stop next">
+            <div class="when">Next stop</div>
+            <h3>Your team?</h3>
+            <p>I'm looking for a backend or full-stack role where the work is meaningful.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about">
+      <div class="container about-grid">
+        <div>
+          <p class="section-label">About</p>
+          <h2>How I work</h2>
+          <p>
+            I do my best work when I can put my head down and work through a hard problem.
+            The tougher the problem, the more I can learn from and enjoy the process. I like work
+            that's technical and practical: systems that real people value.
+          </p>
+          <p>
+            Centene taught me to learn first, then own it. I'd get up to speed on an unfamiliar
+            system, then take full ownership and run with it on my own. I've worked that way ever
+            since, from my capstone's entire database to a donor platform for a nonprofit.
+          </p>
+        </div>
+        <img class="headshot" src="assets/headshot-circle.jpg" alt="Corey Warden in sunglasses in front of a wall of &quot;Made in Song Wat&quot; posters in Bangkok" width="260" height="260">
+      </div>
+    </section>
+
+    <!-- ===== TRAVEL ===== -->
+    <section id="travel">
+      <div class="container">
+        <p class="section-label">Off the clock</p>
+        <h2>Where I've been</h2>
+        <p class="travel-intro">
+          I enjoy traveling in my free time, and it trains the same skills I use in my work: landing somewhere
+          unfamiliar and getting comfortable fast. Hover over a pin (or tap a place below) to see
+          my experiences around the world.
+        </p>
+        <div class="travel-stage">
+          <div class="travel-map" aria-label="World map of places I've traveled">
+            <svg role="presentation"></svg>
+          </div>
+          <div class="trips" aria-label="Trips"></div>
+          <div class="travel-pop" id="travel-pop" hidden></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <p class="section-label">Contact</p>
+        <h2>Let's talk</h2>
+        <p class="muted">I'm open to backend and full-stack roles. Send me a message.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="mailto:coreybwarden@gmail.com">Email me</a>
+          <a class="btn" href="https://www.linkedin.com/in/corey-warden" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" href="https://github.com/coreyw7" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© 2026 Corey Warden · Built by hand, hosted on GitHub Pages</div>
+  </footer>
+
+  <!-- World map: d3-geo draws the map, topojson + world-atlas provide land shapes -->
+  <script defer src="https://cdn.jsdelivr.net/npm/d3-array@3.2.4/dist/d3-array.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/d3-geo@3.1.0/dist/d3-geo.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
+  <script defer src="js/travel.js"></script>
+  <script>
+    // Respect reduced-motion: park the plane at the end of its route instead of flying it.
+    if (window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      const s = document.querySelector(".name-flight svg");
+      if (s && s.setCurrentTime) { s.setCurrentTime(10); s.pauseAnimations(); }
+    }
+  </script>
+</body>
+</html>

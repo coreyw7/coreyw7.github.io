@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Automated Monitoring System — Corey Warden</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="container">
+      <a href="../index.html" class="nav-name">Corey Warden</a>
+      <div class="nav-links">
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <header class="case-header">
+      <a class="back" href="../index.html#projects">← All projects</a>
+      <p class="section-label">Case study · Centene internship</p>
+      <h1>Automated Monitoring System</h1>
+      <p class="tagline muted">I rebuilt the tool that watches API traffic. It is now doesn't expose passwords, has no dead code, and has hourly alerts.</p>
+      <dl class="case-facts">
+        <div><dt>Role</dt><dd>Software Dev Intern</dd></div>
+        <div><dt>Timeline</dt><dd>May – Jul 2025</dd></div>
+        <div><dt>Stack</dt><dd>Python · GitLab CI · Docker · Selenium</dd></div>
+        <div><dt>Status</dt><dd>Still in use</dd></div>
+      </dl>
+    </header>
+
+    <article class="case-body">
+      <p class="note">This was internal work, so it is described in general terms. No proprietary code or data is shown.</p>
+
+      <section>
+        <h2>The problem</h2>
+        <p>
+          The team relied on a monitoring tool that tracked traffic on a marketplace API. When traffic
+          got too high, a developer needed to step in before something broke. The tool worked, but
+          it had two real problems.
+        </p>
+        <ul>
+          <li><strong>Exposed credentials.</strong> There were passwords committed to GitLab in hardcoded passwords in the logic, and external contractors had access to that repo.</li>
+          <li><strong>Hard to maintain.</strong> It was written in a different language from the rest of the team's code, it was much more complex than it needed to be, and it carried features nobody used.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>What I did</h2>
+        <ul>
+          <li><strong>Took the passwords out of the repo.</strong> The credentials now live in GitLab's CI/CD settings, and the pipeline injects them only while the automation runs. They're never committed, so contractors can't see them.</li>
+          <li><strong>Rewrote it in Python</strong>, the language the team already used, so anyone on the team could maintain it.</li>
+          <li><strong>Cut it down to what was needed.</strong> I dropped the unused features and kept the core job: watch the traffic with automatic updates.</li>
+          <li><strong>Automated the process</strong> with Selenium, which pulls numbers from the monitoring site on an hourly schedule.</li>
+          <li><strong>Packaged it in Docker</strong> and added <strong>hourly email and Microsoft Teams alerts</strong>.</li>
+        </ul>
+        <figure class="diagram">
+          <img src="../assets/diagrams/centene-monitoring.svg" alt="Before: a legacy script with credentials committed to the repo, extra complexity, and no automated notifications. After: a lean Python and Selenium tool whose secrets are injected by GitLab CI, running in Docker and sending hourly Email and Teams alerts.">
+          <figcaption>Before and after the rebuild (simplified)</figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <h2>Result</h2>
+        <p>
+          My team, my manager, and the director of our project started using it as soon as it
+          shipped. My internship ended soon after, but I know it's still running today.
+        </p>
+      </section>
+
+      <section>
+        <h2>What I learned</h2>
+        <p>
+          <strong>Learn first, then own it.</strong> I came in knowing nothing about this system, so
+          I spent the first stretch figuring out what it actually did and what the team actually
+          needed. Once I understood it, I took ownership and drove the rebuild on my own. That habit
+          of getting up to speed fast and then working independently is the biggest thing I took
+          from Centene.
+        </p>
+      </section>
+
+      <nav class="case-nav">
+        <a href="donor-platform.html">← Donor Platform</a>
+        <a href="centene-api-validation.html">Next: GraphQL API Validation →</a>
+      </nav>
+    </article>
+  </main>
+
+  <footer><div class="container">© 2026 Corey Warden</div></footer>
+</body>
+</html>

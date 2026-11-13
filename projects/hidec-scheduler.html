@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HiDEC Lab Scheduler — Corey Warden</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="container">
+      <a href="../index.html" class="nav-name">Corey Warden</a>
+      <div class="nav-links">
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <header class="case-header">
+      <a class="back" href="../index.html#projects">← All projects</a>
+      <p class="section-label">Case study · Senior capstone</p>
+      <h1>HiDEC Lab Scheduler</h1>
+      <p class="tagline muted">A full-stack scheduling app for the University of Arkansas HiDEC electronics lab. It replaced the outdated booking by email and Google Calendar, and was shipped.</p>
+      <dl class="case-facts">
+        <div><dt>My role</dt><dd>Database, billing &amp; auth · Sponsor lead</dd></div>
+        <div><dt>Timeline</dt><dd>Aug 2025 – May 2026</dd></div>
+        <div><dt>Stack</dt><dd>FastAPI · MySQL · React</dd></div>
+        <div><dt>Status</dt><dd>Shipped to sponsor</dd></div>
+      </dl>
+    </header>
+
+    <article class="case-body">
+      <section>
+        <h2>The problem</h2>
+        <p>
+          Clients booked lab time by emailing requests, and staff added them to a Google
+          Calendar by hand. That meant a lot of back-and-forth, and the schedule only stayed
+          accurate if every email got handled.
+        </p>
+      </section>
+
+      <section>
+        <h2>What I owned</h2>
+        <ul>
+          <li><strong>The entire database and schema.</strong> I designed the MySQL data model the whole app runs on and managed its changes with Alembic migrations.</li>
+          <li><strong>Billing logic</strong>, so the lab can charge for its time.</li>
+          <li><strong>Authentication</strong>, so the right people see and change the right things.</li>
+          <li><strong>The sponsor relationship.</strong> I led our weekly check-ins with the lab and turned their feedback into tasks for the team.</li>
+        </ul>
+        <figure class="shot">
+          <img src="../assets/screenshots/hidec-calendar.jpg" alt="The HiDEC Online Scheduler reservation calendar: a Monday-to-Friday week view with equipment bookings such as Wire Bonder, Laser Dicing Saw, and Scanning Electron Microscope, each labeled with who reserved it." loading="lazy">
+          <figcaption>The reservation calendar, which replaced booking by email (demo data)</figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <h2>How it's built</h2>
+        <ul>
+          <li>FastAPI backend with MySQL and Alembic migrations, in Docker</li>
+          <li>React + Vite frontend with React Router</li>
+          <li>CI through Azure Pipelines</li>
+        </ul>
+        <figure class="diagram">
+          <img src="../assets/diagrams/hidec-architecture.svg" alt="Lab users use a React frontend, which calls a FastAPI backend that handles billing and authentication and stores data in MySQL, all containerized with Docker and built through Azure Pipelines.">
+          <figcaption>System architecture</figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <h2>Result</h2>
+        <p>
+          The app shipped to the lab. In the sponsor's words, it made their lives easier and
+          more organized.
+        </p>
+        <figure class="shot">
+          <img src="../assets/screenshots/hidec-equipment.jpg" alt="The equipment list, showing each tool's location, academic and commercial hourly rates, whether approval is required, and whether it is functional." loading="lazy">
+          <figcaption>Equipment with separate academic and commercial rates, which feed the billing logic (demo data)</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="../assets/screenshots/hidec-approvals.jpg" alt="The Approve Reservations screen: a table of pending requests with requester, equipment, and time, plus approve and reject buttons." loading="lazy">
+          <figcaption>Admins approve or reject requests for equipment that needs sign-off (demo data)</figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <h2>What I learned</h2>
+        <p>
+          <strong>The schema is the foundation, so careful planning upfront is a must.</strong> Because I owned
+          the database, every part of the app sat on top of my own designs. A change in the schema later down the
+          line isn't just my problem. It ripples through everyone's code. Careful planning at the
+          start saves the whole team pain and time.
+        </p>
+        <p>
+          <strong>Get the full picture early.</strong> Frequent check-ins with the sponsor, and
+          getting the complete set of requirements early, kept surprises from showing up late in
+          the project.
+        </p>
+      </section>
+
+      <nav class="case-nav">
+        <a href="centene-api-validation.html">← GraphQL API Validation</a>
+        <a href="sharing-shed-intake.html">Next: Sharing Shed Intake →</a>
+      </nav>
+    </article>
+  </main>
+
+  <footer><div class="container">© 2026 Corey Warden</div></footer>
+</body>
+</html>

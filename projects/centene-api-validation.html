@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GraphQL API Validation — Corey Warden</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="container">
+      <a href="../index.html" class="nav-name">Corey Warden</a>
+      <div class="nav-links">
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <header class="case-header">
+      <a class="back" href="../index.html#projects">← All projects</a>
+      <p class="section-label">Case study · Centene internship</p>
+      <h1>GraphQL API Validation</h1>
+      <p class="tagline muted">Before the team switched member data to a new GraphQL API, I validated it against the legacy REST API.</p>
+      <dl class="case-facts">
+        <div><dt>Role</dt><dd>Software Dev Intern</dd></div>
+        <div><dt>Timeline</dt><dd>Jun – Aug 2024</dd></div>
+        <div><dt>Stack</dt><dd>Python · Pytest · GraphQL · Postman</dd></div>
+        <div><dt>Scope</dt><dd>~100 data points</dd></div>
+      </dl>
+    </header>
+
+    <article class="case-body">
+      <p class="note">This was internal work, so it is described in general terms. No proprietary code or data is shown.</p>
+
+      <section>
+        <h2>The problem</h2>
+        <p>
+          The legacy API used REST, and every GET request returned every data point for a member,
+          whether it was needed or not. The new API used GraphQL, so callers could ask for just
+          the fields they wanted. Before anyone switched over, the team needed proof that the new
+          API returned the same data and returned it faster.
+        </p>
+      </section>
+
+      <section>
+        <h2>What I did</h2>
+        <ul>
+          <li><strong>Built a Pytest suite</strong> that requested the same members from both APIs and compared the results field by field, across roughly 100 data points.</li>
+          <li><strong>Used Postman</strong> to explore both APIs and reproduce mismatches by hand when a test failed.</li>
+          <li><strong>Benchmarked fetch speed</strong> for member data on both APIs.</li>
+        </ul>
+        <figure class="diagram">
+          <img src="../assets/diagrams/centene-api-validation.svg" alt="A Pytest suite sends the same member queries to the legacy REST API and the new GraphQL API, compares about 100 fields and benchmarks speed, and the findings led to an API upgrade.">
+          <figcaption>How the validation harness worked</figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <h2>Result</h2>
+        <ul>
+          <li>Found <strong>data mismatches and fields missing</strong> from the new API before it replaced the old one.</li>
+          <li>The team fixed the small issues quickly. For the bigger ones, my findings plus what the team already knew led them to <strong>switch to an updated version of the API</strong> rather than patch the old one.</li>
+          <li>The benchmarks showed the GraphQL API was <strong>faster</strong> at fetching member data.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>What I learned</h2>
+        <p>
+          This was my first real project on a production system, and it's where I learned to
+          have a test first mentality. I would constantly be testing before moving forward, and
+          made sure to test all edge cases. I also saw how a careful side-by-side comparison can 
+          change a team's direction, not just catch bugs.
+        </p>
+      </section>
+
+      <nav class="case-nav">
+        <a href="centene-monitoring.html">← Automated Monitoring</a>
+        <a href="hidec-scheduler.html">Next: HiDEC Lab Scheduler →</a>
+      </nav>
+    </article>
+  </main>
+
+  <footer><div class="container">© 2026 Corey Warden</div></footer>
+</body>
+</html>

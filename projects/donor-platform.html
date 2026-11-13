@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pathways Donor Platform — Corey Warden</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="container">
+      <a href="../index.html" class="nav-name">Corey Warden</a>
+      <div class="nav-links">
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <header class="case-header">
+      <a class="back" href="../index.html#projects">← All projects</a>
+      <p class="section-label">Case study · In progress</p>
+      <h1>Pathways Donor Platform</h1>
+      <p class="tagline muted">An online giving and donor management system for Pathways Project Coalition of the Ozarks, built so they own their data and keep more of every donation.</p>
+      <dl class="case-facts">
+        <div><dt>Role</dt><dd>Sole developer</dd></div>
+        <div><dt>Timeline</dt><dd>Aug 2026 – Present</dd></div>
+        <div><dt>Stack</dt><dd>Django · PostgreSQL · Stripe</dd></div>
+        <div><dt>Status</dt><dd>Donation page nearly done</dd></div>
+      </dl>
+    </header>
+
+    <article class="case-body">
+      <section>
+        <h2>The problem</h2>
+        <p>
+          Pathways took donations through Zeffy. It worked, but their donor data lived on someone
+          else's platform, and part of every gift went to Zeffy instead of the mission. They
+          wanted their own system: their data, their donor relationships, and more of each
+          donation going where donors meant it to go.
+        </p>
+      </section>
+
+      <section>
+        <h2>What I'm building</h2>
+        <ul>
+          <li><strong>Public giving page:</strong> one-time and recurring donations through Stripe Checkout, so card data never touches our servers.</li>
+          <li><strong>Donor records:</strong> donors, gifts, and campaigns in PostgreSQL, with Django handling authentication and access control.</li>
+          <li><strong>Automated email:</strong> receipts sent through Resend, and opted-in donors synced to Pathways' existing Mailchimp list.</li>
+          <li><strong>Admin dashboard:</strong> donor management and giving reports for staff and the board.</li>
+        </ul>
+        <figure class="diagram">
+          <img src="../assets/diagrams/donor-architecture.svg" alt="Donors and staff use a Django app, which connects to Stripe Checkout, PostgreSQL, Resend for receipts, and Mailchimp for newsletters.">
+          <figcaption>How the pieces fit together</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="../assets/screenshots/donor-platform-dashboard.png" alt="The donor platform dashboard." loading="lazy">
+          <figcaption>The donor platform dashboard</figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <h2>Key decisions</h2>
+        <ul>
+          <li><strong>Payment processor stays swappable.</strong> PayPal and Venmo are planned for later, so payments are stored with a processor name and ID instead of Stripe-specific columns.</li>
+          <li><strong>Stripe's hosted checkout.</strong> Card data stays with Stripe, which keeps security and compliance work small for an organization without an IT team.</li>
+          <li><strong>Server-rendered pages with HTMX.</strong> It's simple enough for the next volunteer developer to pick up and maintain.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Where it stands</h2>
+        <p>
+          The donation page is nearly done, and the admin tools are scaffolded and in progress.
+          The goal is to launch ahead of Giving Tuesday.
+        </p>
+      </section>
+
+      <nav class="case-nav">
+        <span></span>
+        <a href="centene-monitoring.html">Next: Automated Monitoring System →</a>
+      </nav>
+    </article>
+  </main>
+
+  <footer><div class="container">© 2026 Corey Warden</div></footer>
+</body>
+</html>
