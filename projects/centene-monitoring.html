@@ -36,7 +36,7 @@
       <a class="back" href="../index.html#projects">← All projects</a>
       <p class="section-label">Case study · Centene internship</p>
       <h1>Automated Monitoring System</h1>
-      <p class="tagline muted">I rebuilt the tool that watches API traffic. It is now doesn't expose passwords, has no dead code, and has hourly alerts.</p>
+      <p class="tagline muted">I rebuilt the tool that watches API traffic. It no longer exposes passwords, has no dead code, and sends hourly alerts.</p>
       <dl class="case-facts">
         <div><dt>Role</dt><dd>Software Dev Intern</dd></div>
         <div><dt>Timeline</dt><dd>May – Jul 2025</dd></div>
@@ -56,7 +56,7 @@
           it had two real problems.
         </p>
         <ul>
-          <li><strong>Exposed credentials.</strong> There were passwords committed to GitLab in hardcoded passwords in the logic, and external contractors had access to that repo.</li>
+          <li><strong>Exposed credentials.</strong> Passwords were hardcoded in the logic and committed to GitLab, and external contractors had access to that repo.</li>
           <li><strong>Hard to maintain.</strong> It was written in a different language from the rest of the team's code, it was much more complex than it needed to be, and it carried features nobody used.</li>
         </ul>
       </section>
@@ -71,7 +71,7 @@
           <li><strong>Packaged it in Docker</strong> and added <strong>hourly email and Microsoft Teams alerts</strong>.</li>
         </ul>
         <figure class="diagram">
-          <img src="../assets/diagrams/centene-monitoring.svg" alt="Before: a legacy script with credentials committed to the repo, extra complexity, and no automated notifications. After: a lean Python and Selenium tool whose secrets are injected by GitLab CI, running in Docker and sending hourly Email and Teams alerts.">
+          <img src="../assets/diagrams/centene-monitoring.svg" alt="Before: a legacy script with credentials committed to the repo, extra complexity, and no automated notifications. After: a lean Python and Selenium tool whose secrets are injected by GitLab CI, running in Docker and sending hourly email and Teams alerts.">
           <figcaption>Before and after the rebuild (simplified)</figcaption>
         </figure>
       </section>
