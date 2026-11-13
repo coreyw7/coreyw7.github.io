@@ -2,7 +2,7 @@
 
 **Live site: [coreyw7.github.io](https://coreyw7.github.io)**
 
-I'm a backend and full-stack developer with a B.S. in Computer Science and a minor in Math from the University of Arkansas. This site has case studies on my work at Centene, my senior capstone, and the software I'm building for nonprofits.
+I'm a backend and full-stack developer with a B.S. in computer science and a minor in math from the University of Arkansas. This site has case studies on my work at Centene, my senior capstone, and the software I'm building for nonprofits.
 
 ## How it's built
 
